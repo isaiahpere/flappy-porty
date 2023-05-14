@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+// animation for entire quote
 const quote = {
   initial: {
     opacity: 0,
@@ -15,6 +16,7 @@ const quote = {
   },
 };
 
+// animation per single word
 const singleWord = {
   initial: {
     opacity: 0,
