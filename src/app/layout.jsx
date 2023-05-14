@@ -24,9 +24,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width-device-width, initial-scale=1" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <body
-        className={`${montserrat.variable} font-mont bg-light w-full min-h-screen`}
-      >
+      <body className={`${montserrat.variable} font-mont bg-light `}>
         <NavBar />
         {children}
       </body>
