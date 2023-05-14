@@ -5,6 +5,8 @@ import Layout from "./components/Layout";
 import profileImage from "../../public/images/profile/profile.png";
 import AnimatedText from "./components/AnimatedText";
 import { LinkArrow } from "./components/Icons";
+import HireMe from "./components/HireMe";
+import lightbulbImage from "../../public/images/svgs/bulb.svg";
 
 export default function Home() {
   return (
@@ -55,6 +57,16 @@ export default function Home() {
           </div>
         </div>
       </Layout>
+      <HireMe />
+      <div>
+        <Image
+          src={lightbulbImage}
+          alt="Isaiah"
+          width="100%"
+          height="100%"
+          className="h-auto absolute right-8 bottom-8 inline-block w-24"
+        />
+      </div>
     </main>
   );
 }
