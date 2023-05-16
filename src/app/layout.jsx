@@ -18,6 +18,8 @@ export const metadata = {
   },
 };
 
+//  STOPPED AT 1:31
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
