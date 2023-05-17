@@ -20,6 +20,7 @@ export default function Home() {
               src={profileImage}
               alt="profile"
               className="w-full h-auto"
+              placeholder="blur"
             />
           </div>
           <div className="w-1/2 flex flex-col item-center self-center">
