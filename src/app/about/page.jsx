@@ -8,6 +8,8 @@ import Layout from "../components/Layout";
 import profileImage from "../../../public/images/profile/profile2.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "../components/Skills";
+import Experience from "../components/Experience";
+import Education from "../components/Education";
 
 const AnimatedNumbers = ({ value }) => {
   // ref
@@ -84,6 +86,7 @@ const About = () => {
                 className="w-full h-auto rounded-2xl"
                 width={100}
                 height={100}
+                priority="true"
               />
             </div>
             <div className="col-span-2 flex flex-col items-end justify-between">
@@ -114,6 +117,8 @@ const About = () => {
             </div>
           </div>
           <Skills />
+          <Experience />
+          <Education />
         </Layout>
       </main>
     </>
