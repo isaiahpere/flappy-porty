@@ -4,12 +4,16 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
+import useThemeSwitcher from "../utls/hooks/useThemeSwitcher";
+
 import Logo from "./Logo";
 import {
   DribbbleIcon,
   GithubIcon,
   LinkedInIcon,
+  MoonIcon,
   PinterestIcon,
+  SunIcon,
   TwitterIcon,
 } from "./Icons";
 
@@ -24,6 +28,7 @@ const CustomeLink = ({ href, title, className = "" }) => {
           absolute left-0 -bottom-0.5 
           group-hover:w-full transition-[width] ease duration-300
           ${path === href ? "w-full" : "w-0"}
+          dark:bg-light
         `}
       >
         &nbsp;
@@ -33,8 +38,9 @@ const CustomeLink = ({ href, title, className = "" }) => {
 };
 
 const NavBar = () => {
+  const [mode, setMode] = useThemeSwitcher();
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
+    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light">
       <nav>
         <CustomeLink href="/" title="Home" className="mr-4" />
         <CustomeLink href="/about" title="About" className="mx-4" />
@@ -92,6 +98,18 @@ const NavBar = () => {
         >
           <DribbbleIcon />
         </motion.a>
+        <button
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          className={`ml-3 flex items-center justify-center rounded-full p-1 ${
+            mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+          }`}
+        >
+          {mode === "dark" ? (
+            <SunIcon className="fill-dark" />
+          ) : (
+            <MoonIcon className="fill-dark" />
+          )}
+        </button>
       </nav>
     </header>
   );
