@@ -26,10 +26,15 @@ const FeaturedProject = ({ type, title, summary, image, link, githubLink }) => {
         <FramerImage
           src={image}
           alt={title}
-          placeholder="blur"
           className="object-cover dark"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          priority={true}
+          sizes="
+            (max-width: 768px) 100vw
+            (max-width: 1200px) 50vw
+            50vw
+          "
         />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between pl-6">
@@ -74,10 +79,15 @@ const Project = ({ title, type, image, link, githubLink }) => {
         <FramerImage
           src={image}
           alt={title}
-          placeholder="blur"
           className="object-cover"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          priority={true}
+          sizes="
+            (max-width: 768px) 100vw
+            (max-width: 1200px) 50vw
+            50vw
+          "
         />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">

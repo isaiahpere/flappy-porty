@@ -54,6 +54,12 @@ const MovingImage = ({ title, image, link }) => {
         style={{ x: x, y: y }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
+        priority={true}
+        sizes="
+          (max-width: 768px) 100vw
+          (max-width: 1200px) 50vw
+          50vw
+        "
       />
     </Link>
   );
@@ -91,9 +97,14 @@ const FeaturedArticle = ({ image, title, time, summary, link }) => {
           src={image}
           alt={title}
           className="w-full h-auto"
-          placeholder="blur"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          priority={true}
+          sizes="
+            (max-width: 768px) 100vw
+            (max-width: 1200px) 50vw
+            50vw
+          "
         />
       </Link>
       <Link href={link} target="_blank">
