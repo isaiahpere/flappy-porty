@@ -9,7 +9,6 @@ import Layout from "../components/Layout";
 import paginationImage from "../../../public/images/articles/pagination.jpg";
 import scrollImage from "../../../public/images/articles/smoothScroll.png";
 import formValidationImage from "../../../public/images/articles/formValidation.png";
-import hocImage from "../../../public/images/articles/hoc.jpg";
 import modalImage from "../../../public/images/articles/modal.png";
 import reduxImage from "../../../public/images/articles/redux.png";
 import todoImage from "../../../public/images/articles/todo.png";
