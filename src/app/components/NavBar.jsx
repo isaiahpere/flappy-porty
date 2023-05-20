@@ -83,7 +83,7 @@ const NavBar = () => {
         <motion.a
           href="https://pinterest.com"
           target="_blank"
-          className="w-6 mx-3"
+          className="w-6 mx-3 bg-light rounded-full"
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
         >
